@@ -1,0 +1,128 @@
+[
+   {
+      "name": "OneLeftEnd",
+      "frame": {
+         "x": "0",
+         "y": "0",
+         "width": "100",
+         "height": "100"
+      }
+   },
+      {
+      "name": "OneRightEnd",
+      "frame": {
+         "x": "100",
+         "y": "0",
+         "width": "100",
+         "height": "100"
+      }
+   },
+      {
+      "name": "OneMiddleBottom",
+      "frame": {
+         "x": "200",
+         "y": "0",
+         "width": "100",
+         "height": "100"
+      }
+   },
+      {
+      "name": "OneMiddleTop",
+      "frame": {
+         "x": "300",
+         "y": "0",
+         "width": "100",
+         "height": "100"
+      }
+   },
+      {
+      "name": "OneMiddleTB",
+      "frame": {
+         "x": "400",
+         "y": "0",
+         "width": "100",
+         "height": "100"
+      }
+   },
+      {
+      "name": "TwoLeftEnd",
+      "frame": {
+         "x": "0",
+         "y": "100",
+         "width": "100",
+         "height": "100"
+      }
+   },
+         {
+      "name": "TwoRightEnd",
+      "frame": {
+         "x": "100",
+         "y": "100",
+         "width": "100",
+         "height": "100"
+      }
+   },
+         {
+      "name": "TwoMiddleTB",
+      "frame": {
+         "x": "200",
+         "y": "100",
+         "width": "100",
+         "height": "100"
+      }
+   },
+         {
+      "name": "TwoMiddle",
+      "frame": {
+         "x": "300",
+         "y": "100",
+         "width": "100",
+         "height": "100"
+      }
+   },
+         {
+      "name": "ThreeLeftEnd",
+      "frame": {
+         "x": "0",
+         "y": "200",
+         "width": "100",
+         "height": "100"
+      }
+   },
+      {
+      "name": "ThreeRightEnd",
+      "frame": {
+         "x": "100",
+         "y": "200",
+         "width": "100",
+         "height": "100"
+      }
+   },
+         {
+      "name": "ThreeTop",
+      "frame": {
+         "x": "200",
+         "y": "200",
+         "width": "100",
+         "height": "100"
+      }
+   },
+         {
+      "name": "ThreeMiddleBottom",
+      "frame": {
+         "x": "300",
+         "y": "200",
+         "width": "100",
+         "height": "100"
+      }
+   },
+         {
+      "name": "ThreeMiddle",
+      "frame": {
+         "x": "400",
+         "y": "200",
+         "width": "100",
+         "height": "100"
+      }
+   }
+]
