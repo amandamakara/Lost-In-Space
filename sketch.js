@@ -1,7 +1,7 @@
 var hero;
 var heroState = 'regular';
 var herojump = 0;
-var heroHealth = 5;
+var heroHealth = 8;
 var Hero_WalkRightAnimation;
 var Hero_DefaultAinimation;
 
@@ -158,6 +158,11 @@ var direction = true;
 var LevelOneBackground;
 var LevelTwoBackground;
 var LevelThreeBackground;
+var transition1;
+var transition2;
+var transition3;
+var transition4;
+var finish;
 
 var startMusic;
 var oneMusic;
@@ -166,6 +171,14 @@ var threeMusic;
 var deathMusic;
 var winMusic;
 
+var healthOne;
+var healthTwo;
+var healthThree;
+var healthFour;
+var healthFive;
+var healthSix;
+var healthSeven;
+var healthEight;
 
 function preload(){
    
@@ -174,14 +187,24 @@ function preload(){
    LevelOneBackground = loadImage('assets/Space_Level1.png');
    LevelTwoBackground = loadImage('assets/Space_Level2.png');
    LevelThreeBackground = loadImage('assets/Space_Level3.png');
+   transition1 = loadImage('assets/Transitions/Start.png');
+   transition2 = loadImage('assets/Transitions/Win.png');
+   transition3 = loadImage('assets/Transitions/Lose.png');
+   transition4 = loadImage('assets/Transitions/Countdown.png');
 //////////////////////////////////////////////// 
    gem1IMG = loadImage('assets/Gems/Emerald-01.png');
    gem2IMG = loadImage('assets/Gems/Diamond-01.png');
    gem3IMG = loadImage('assets/Gems/Citrine-01.png');
 //////////////////////////////////////////////// 
    shotIMG = loadImage('assets/Bullet01.png');
-   
-   
+   finish = loadImage('assets/Sprite.png');
+//////////////////////////////////////////////////
+   healthOne = loadImage('assets/Health/HealthBar1-01.png');
+   healthTwo = loadImage('assets/Health/HealthBar2-01.png');
+   healthThree = loadImage('assets/Health/HealthBar3-01.png');
+   healthFour = loadImage('assets/Health/HealthBar4-01.png');
+   healthFive = loadImage('assets/Health/HealthBar5-01.png');
+   healthSix = loadImage('assets/Health/HealthBar6-01.png');
 
    Hero_DefaultAinimation = loadAnimation('assets/Hero_Default/SpacemanDefault_00000.png','assets/Hero_Default/SpacemanDefault_00012.png');
    Hero_WalkRightAnimation = loadAnimation('assets/Hero_Right/SpacemanWalk_00000.png','assets/Hero_Right/SpacemanWalk_00022.png');
@@ -294,6 +317,7 @@ function draw() {
             if(heroState === 'power'){
              hero.scale = .5;
              hero.velocity.x = 12;
+             hero.mirrorX(1);
              }
          
       }
@@ -302,6 +326,7 @@ function draw() {
          hero.velocity.x = -8;
          direction = false;
          hero.changeAnimation('HeroRight');
+         hero.mirrorX(-1);
       }
 }
 
@@ -322,6 +347,7 @@ function keyPressed(){
          shot.life = 70;
          //shot.shapeColor = 'white';
          shot.addImage('shotIMG',shotIMG);
+         shot.mirrorX(1);
          shots.add(shot);
     }else{
 
@@ -331,6 +357,7 @@ function keyPressed(){
          shot.life = 70;
          //shot.shapeColor = 'white';
          shot.addImage('shotIMG',shotIMG);
+         shot.mirrorX(-1);
          shots.add(shot);
     }     
     //JUMP AND POWER SLAM  

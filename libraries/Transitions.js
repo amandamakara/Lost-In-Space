@@ -1,10 +1,10 @@
 function startUp(){
-   background(0);
+   background(transition1);
    
    fill(255);
    textSize(50);
    textAlign(CENTER);
-   text("Lost in Space", width/2,height/2-100);
+   //text("Lost in Space", width/2,height/2-100);
    text("Press x to begin", width/2, height/2);
    
       if(key === 'x'){
@@ -16,23 +16,25 @@ function startUp(){
 }
 
 function win(){
-   background('teal');
+   background(0);
+   image(transition2,camera.position.x - 500,camera.position.y -400);
    fill(255);
    textSize(50);
    textAlign(CENTER);
-   text("Winner winner chicken dinner!",camera.position.x,camera.position.y);
+   //text("Winner winner chicken dinner!",camera.position.x,camera.position.y);
 }
 
 function lose(){
-   background('orange');
+   background(0);
+   image(transition3,camera.position.x - 500,camera.position.y -400);
    fill(0);
    textSize(50);
    textAlign(CENTER);
-   text("Loser",camera.position.x,camera.position.y);
+   //text("Loser",camera.position.x,camera.position.y);
 }
 
 function countDownOne(){
-   background('green');
+   background(transition4);
    
    //MOVE THE CAMERA TO BEGINNING
    camera.position.x = width/2;
@@ -62,7 +64,7 @@ function countDownOne(){
 }
 
 function countDownTwo(){
-   background('purple');
+   background(transition4);
    
    //MOVE THE CAMERA TO BEGINNING
    camera.position.x = width/2;

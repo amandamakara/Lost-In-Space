@@ -7,6 +7,7 @@ function levelThree(){
     finishLine3 = createSprite(4700,75,75,75);
       finishLine3.shapeColor = 'blue';
       finishLine3.setCollider('finishLine3',0,0,60,60);
+      finishLine3.addImage("finish",finish);
   
       //CREATING THE FLOOR TILES LEVEL ONE
         for(var i = 0; i < level3Grid.length; i++){
@@ -107,6 +108,22 @@ function levelThree_draw(){
      enemies3.overlap(hero,heroHit);
      gems.overlap(hero,gemHit);
      finishLine3.overlap(hero,level3Clear);
+     
+      switch(heroHealth){
+        case 1:
+           image(healthOne,camera.position.x - 600,camera.position.y - 300); break;
+        case 2:
+           image(healthTwo,camera.position.x - 600,camera.position.y - 300); break;
+        case 3:
+           image(healthThree,camera.position.x - 600,camera.position.y - 300); break;
+        case 4:
+           image(healthFour,camera.position.x - 600,camera.position.y - 300); break;
+        case 5:
+           image(healthFive,camera.position.x - 600,camera.position.y - 300); break;
+        case 6:
+           image(healthSix,camera.position.x - 600,camera.position.y - 300); break;
+     }
+     
   
        //MOVING THE SPRITE BASED ON IF KEY IS HELD DOWN
       hero.velocity.x = 0;

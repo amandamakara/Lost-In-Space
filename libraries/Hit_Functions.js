@@ -29,11 +29,14 @@ function heroHit(enemy,hero){
   
    heroHealth --;
    heroState = 'regular';
-/*  
+
    if(heroHealth <= 0){
       gameState = 'lose';
+      oneMusic.stop();
+      twoMusic.stop();
+      threeMusic.stop();
    }
-*/
+      enemy.remove();
       hero.shapeColor = 'orange';
 
 }
@@ -158,7 +161,7 @@ function level3Clear(hero,finish){
    finishLine3.remove();
    hero.remove();
    
-   gameState = "win";
+   gameState = 'win';
    //change the state to countdown
    
 }

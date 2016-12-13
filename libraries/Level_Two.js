@@ -6,6 +6,7 @@ function levelTwo(){
     finishLine2 = createSprite(6300,635,75,75);
       finishLine2.shapeColor = 'orange';
       finishLine2.setCollider('finishLine2',0,0,60,60);
+      finishLine2.addImage("finish",finish);
       
       
       //CREATING THE FLOOR TILES LEVEL ONE
@@ -168,6 +169,22 @@ function levelTwo_draw(){
      enemies2.overlap(hero,heroHit);
      gems.overlap(hero,gemHit);
      finishLine2.overlap(hero,level2Clear);
+     
+ switch(heroHealth){
+        case 1:
+           image(healthOne,camera.position.x - 600,camera.position.y - 300); break;
+        case 2:
+           image(healthTwo,camera.position.x - 600,camera.position.y - 300); break;
+        case 3:
+           image(healthThree,camera.position.x - 600,camera.position.y - 300); break;
+        case 4:
+           image(healthFour,camera.position.x - 600,camera.position.y - 300); break;
+        case 5:
+           image(healthFive,camera.position.x - 600,camera.position.y - 300); break;
+        case 6:
+           image(healthSix,camera.position.x - 600,camera.position.y - 300); break;
+     }
+     
      
      //MOVING THE SPRITE BASED ON IF KEY IS HELD DOWN
       hero.velocity.x = 0;
